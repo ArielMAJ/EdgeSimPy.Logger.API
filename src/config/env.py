@@ -82,6 +82,8 @@ class Config:
     DATABASE: DatabaseConfig = DatabaseConfig()
     AUTH: AuthConfig = AuthConfig()
 
+    API_KEY: str = os.getenv("API_KEY")
+
 
 class TestConfig(Config):
     """Test configuration."""

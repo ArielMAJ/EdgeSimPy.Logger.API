@@ -49,7 +49,7 @@ class ModelBase(DeclarativeBase):
     @classmethod
     async def get(
         cls, *criterion: ColumnExpressionArgument[bool], **kwargs: Any
-    ) -> Self:
+    ) -> Self | None:
         if criterion:
             result = await db.session.execute(select(cls).filter(*criterion))
         else:

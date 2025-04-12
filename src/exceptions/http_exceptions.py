@@ -1,5 +1,6 @@
-from src.database.models.model_base import ModelBase
 from fastapi import HTTPException, status
+
+from src.database.models.model_base import ModelBase
 
 
 class NotFoundException(HTTPException):
@@ -14,6 +15,5 @@ class CredentialsException(HTTPException):
     def __init__(self):
         super().__init__(
             status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Could not validate credentials",
-            headers={"WWW-Authenticate": "Bearer"},
+            detail="Unauthorized: Invalid or missing API-KEY",
         )
