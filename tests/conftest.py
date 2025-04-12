@@ -1,5 +1,5 @@
 import pytest
-from api.app import get_app, lifespan
+from src.app import get_app, lifespan
 from httpx import AsyncClient
 
 

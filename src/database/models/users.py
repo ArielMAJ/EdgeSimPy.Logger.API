@@ -1,6 +1,6 @@
 from typing import Union
 
-from api.database.models.model_base import ModelBase
+from src.database.models.model_base import ModelBase
 from sqlalchemy import String
 from sqlalchemy.orm import Mapped, mapped_column
 from typing_extensions import Self

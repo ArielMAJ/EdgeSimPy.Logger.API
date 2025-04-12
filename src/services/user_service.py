@@ -1,8 +1,8 @@
 from typing import List, Union
 
-from api.database.models.users import User
-from api.exceptions.http_exceptions import NotFoundException
-from api.schemas.user import UserCreate
+from src.database.models.users import User
+from src.exceptions.http_exceptions import NotFoundException
+from src.schemas.user import UserCreate
 from loguru import logger
 
 

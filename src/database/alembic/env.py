@@ -2,8 +2,8 @@ import asyncio
 from logging.config import fileConfig
 
 from alembic import context
-from api.config import Config
-from api.database.models.model_base import ModelBase
+from src.config import Config
+from src.database.models.model_base import ModelBase
 from sqlalchemy import pool
 from sqlalchemy.engine import Connection
 from sqlalchemy.ext.asyncio import async_engine_from_config

@@ -6,7 +6,7 @@ Random number service class.
 import asyncio
 from random import random
 
-from api.schemas.random_number import RandomResponse
+from src.schemas.random_number import RandomResponse
 from loguru import logger
 
 

@@ -1,5 +1,5 @@
-from api.schemas.root_response import RootResponse
-from api.services.root_response_service import RootResponseService
+from src.schemas.root_response import RootResponse
+from src.services.root_response_service import RootResponseService
 from fastapi import APIRouter
 from fastapi_cache.decorator import cache
 

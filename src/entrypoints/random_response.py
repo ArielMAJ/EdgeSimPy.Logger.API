@@ -1,5 +1,5 @@
-from api.schemas.random_number import RandomResponse
-from api.services.random_number_service import RandomResponseService
+from src.schemas.random_number import RandomResponse
+from src.services.random_number_service import RandomResponseService
 from fastapi import APIRouter
 from fastapi_cache.decorator import cache
 

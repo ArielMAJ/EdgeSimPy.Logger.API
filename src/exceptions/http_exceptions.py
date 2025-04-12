@@ -1,4 +1,4 @@
-from api.database.models.model_base import ModelBase
+from src.database.models.model_base import ModelBase
 from fastapi import HTTPException, status
 
 

@@ -1,5 +1,5 @@
 import uvicorn
-from api.config import Config
+from src.config import Config
 
 
 def main() -> None:

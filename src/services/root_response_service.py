@@ -5,7 +5,7 @@ Root response service class.
 import asyncio
 from random import random
 
-from api.schemas.root_response import RootResponse
+from src.schemas.root_response import RootResponse
 from loguru import logger
 
 

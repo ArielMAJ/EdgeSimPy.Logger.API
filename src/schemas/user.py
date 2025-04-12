@@ -1,5 +1,5 @@
-from api.schemas.base_db_schema import BaseDBSchema
-from api.services.auth import AuthService
+from src.schemas.base_db_schema import BaseDBSchema
+from src.services.auth import AuthService
 from pydantic import BaseModel, field_serializer
 
 
