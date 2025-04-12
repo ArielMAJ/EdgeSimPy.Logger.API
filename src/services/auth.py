@@ -2,13 +2,14 @@ from datetime import datetime, timedelta, timezone
 from typing import Annotated, Union
 
 import jwt
-from src.config import Config
-from src.database.models.users import User
-from src.exceptions.http_exceptions import CredentialsException
-from src.schemas.auth import TokenData
 from fastapi import Depends
 from fastapi.security import OAuth2PasswordBearer
 from passlib.context import CryptContext
+
+from src.config.env import Config
+from src.database.models.users import User
+from src.exceptions.http_exceptions import CredentialsException
+from src.schemas.auth import TokenData
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/auth/token")
