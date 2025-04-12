@@ -1,7 +1,7 @@
 from contextlib import asynccontextmanager
 from pathlib import Path
 
-from fastapi import FastAPI
+from fastapi import Depends, FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi_async_sqlalchemy import SQLAlchemyMiddleware
 from fastapi_cache import FastAPICache
@@ -12,6 +12,7 @@ from src.config.env import Config
 from src.config.loguru import logger_config
 from src.entrypoints import router
 from src.middleware.logger_middleware import LoggerMiddleware
+from src.utils.dependencies import api_key_dependency
 
 APP_ROOT = Path(__file__).parent
 logger.configure(**logger_config())
@@ -56,7 +57,7 @@ def get_app() -> FastAPI:
         LoggerMiddleware,
         logger=logger,
     )
-    _app.include_router(router=router)
+    _app.include_router(router=router, dependencies=[Depends(api_key_dependency)])
 
     FastAPICache.init(InMemoryBackend(), prefix="fastapi-cache")
     return _app
